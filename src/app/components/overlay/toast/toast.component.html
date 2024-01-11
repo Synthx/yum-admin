@@ -1,0 +1,8 @@
+<div class="yum-toast yum-toast_type--{{ data.type }}">
+  @if (data.icon; as icon) {
+    <yum-icon class="yum-toast-icon" [name]="icon"/>
+  }
+  <div class="yum-toast-content">
+    {{ data.content }}
+  </div>
+</div>

@@ -1,0 +1,44 @@
+{
+  "name": "yum-admin",
+  "version": "24.1.1",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "check": "npx @biomejs/biome check --apply ./src",
+    "format": "npx @biomejs/biome format ./src",
+    "lint": "npx @biomejs/biome lint ./src"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^17.0.0",
+    "@angular/cdk": "^17.0.5",
+    "@angular/common": "^17.0.0",
+    "@angular/compiler": "^17.0.0",
+    "@angular/core": "^17.0.0",
+    "@angular/fire": "^17.0.1",
+    "@angular/forms": "^17.0.0",
+    "@angular/google-maps": "^17.0.5",
+    "@angular/material": "^17.0.5",
+    "@angular/platform-browser": "^17.0.0",
+    "@angular/platform-browser-dynamic": "^17.0.0",
+    "@angular/router": "^17.0.0",
+    "@ngneat/until-destroy": "^10.0.0",
+    "@ngrx/signals": "^17.1.0",
+    "remixicon": "^4.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.0.10",
+    "@angular/cli": "^17.0.10",
+    "@angular/compiler-cli": "^17.0.0",
+    "@biomejs/biome": "^1.5.2",
+    "@schematics/angular": "^17.0.10",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "typescript": "~5.2.2"
+  }
+}

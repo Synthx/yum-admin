@@ -1,0 +1,61 @@
+.yum-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &--disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: var(--kia-opacity--disabled);
+  }
+
+  &-input {
+    transition: all 90ms 0ms cubic-bezier(0, 0, 0.2, 1);
+    position: relative;
+    appearance: none;
+    cursor: pointer;
+    background-color: var(--kia-color--background);
+    border: 1px solid var(--kia-color--border);
+    border-radius: var(--kia-radius--small);
+    height: 22px;
+    width: 22px;
+    padding: 0;
+    margin: 0;
+
+    &:before {
+      content: '';
+      transition: transform 90ms ease-in-out;
+      position: absolute;
+      top: 5px;
+      left: 4px;
+      right: 3px;
+      bottom: 5px;
+      background: var(--kia-color--background);
+      transform: scale(0);
+      clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    }
+
+    &:checked {
+      background-color: var(--kia-color--primary);
+      border-color: var(--kia-color--primary);
+
+      &:before {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-label {
+    flex: 1;
+    cursor: pointer;
+    color: var(--kia-color--primary);
+    font-family: var(--kia-typo--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+
+    &-required {
+      color: var(--kia-color--error);
+    }
+  }
+}

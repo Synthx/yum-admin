@@ -1,0 +1,47 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+@import "remixicon/fonts/remixicon.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --yum-color--primary: #31302d;
+  --yum-color--background: #ffffff;
+  --yum-color--border: #dedcd9;
+  --yum-color--error: #c64758;
+  --yum-color--text: #31302d;
+  --yum-typo--font-family: Poppins, Arial, sans-serif;
+  --yum-typo--font-family-title: Poppins, Arial, sans-serif;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--yum-typo--font-family);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--yum-color--text);
+}
+
+body {
+  background-color: var(--yum-color--background);
+}
+
+h1, h2, h3 {
+  font-family: var(--yum-typo--font-family-title);
+}
+
+h1 {
+  font-size: 50px;
+}
+
+a:hover {
+  text-decoration: underline;
+}

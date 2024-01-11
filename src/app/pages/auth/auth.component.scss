@@ -1,0 +1,19 @@
+.auth-layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-image: url('https://preview.keenthemes.com/metronic8/demo1/assets/media/misc/auth-bg.png');
+  background-size: cover;
+
+  &-container {
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    left: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 510px;
+  }
+}

@@ -1,0 +1,73 @@
+.yum-btn {
+  position: relative;
+  appearance: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  min-height: 54px;
+  width: 100%;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--yum-typo--font-family);
+  text-align: center;
+
+  &:disabled,
+  &--disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.48;
+  }
+
+  &-content {
+    display: flex;
+  }
+
+  &_variant {
+    &--primary {
+      background: var(--yum-color--primary);
+      color: #ffffff;
+
+      .kia-btn-spinner {
+        --kia-color--primary: #ffffff;
+      }
+    }
+
+    &--secondary {
+      background: transparent;
+      border: 1px solid var(--yum-color--primary);
+      color: var(--yum-color--primary);
+      font-weight: 500;
+    }
+
+    &--tertiary {
+      background: transparent;
+      color: var(--yum-color--primary);
+      text-decoration-line: underline;
+      font-weight: 500;
+    }
+
+    &--ghost {
+      background: transparent;
+      color: var(--yum-color--primary);
+      font-weight: 500;
+    }
+  }
+
+  &-spinner {
+    position: absolute;
+    z-index: 10;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

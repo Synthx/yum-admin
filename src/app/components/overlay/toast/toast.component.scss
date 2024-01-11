@@ -1,0 +1,39 @@
+.yum-toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0;
+  color: #ffffff;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+
+  &_type {
+    &--primary {
+      background: var(--yum-color--primary);
+    }
+
+    &--validation {
+      background: var(--kia-color--validation);
+    }
+
+    &--warning {
+      background: var(--kia-color--warning);
+    }
+
+    &--error {
+      background: var(--yum-color--error);
+    }
+  }
+
+  &-icon {
+    color: #ffffff;
+    height: 24px;
+    width: 24px;
+  }
+
+  &-content {
+    flex: 1;
+  }
+}

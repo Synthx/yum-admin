@@ -1,0 +1,70 @@
+.yum-icon-btn {
+  appearance: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--kia-radius--full);
+
+  &:disabled {
+    opacity: var(--kia-opacity--disabled);
+    cursor: not-allowed;
+  }
+
+  yum-icon {
+    height: 24px;
+    width: 24px;
+  }
+
+  &_size {
+    &--medium {
+      height: 44px;
+      width: 44px;
+      padding: 8px;
+    }
+
+    &--small {
+      height: 32px;
+      width: 32px;
+      padding: 4px;
+
+      yum-icon {
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    &--x-small {
+      height: 17px;
+      width: 17px;
+      padding: 0;
+
+      yum-icon {
+        height: 17px;
+        width: 17px;
+      }
+    }
+  }
+
+  &_variant {
+    &--primary {
+      background: var(--kia-color--primary-gradient);
+      color: #ffffff;
+    }
+
+    &--secondary {
+      background: var(--kia-color--background-content);
+      color: var(--kia-color--primary);
+    }
+
+    &--default {
+      background: transparent;
+      color: var(--kia-color--primary);
+    }
+  }
+}

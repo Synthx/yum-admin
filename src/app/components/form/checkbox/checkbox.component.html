@@ -1,0 +1,16 @@
+<div class="yum-checkbox" [class.kia-checkbox--disabled]="disabled">
+  <input
+    class="yum-checkbox-input"
+    type="checkbox"
+    [checked]="checked"
+    [disabled]="disabled"
+    [id]="inputId"
+    (change)="toggle()"
+  />
+  <label class="yum-checkbox-label" [for]="inputId">
+    <ng-content />
+    @if (required) {
+      <span aria-hidden="true" class="yum-checkbox-label-required"> * </span>
+    }
+  </label>
+</div>

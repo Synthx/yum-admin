@@ -1,0 +1,36 @@
+<div class="yum-form-field" [class.kia-form-field--select]="input._isSelect">
+  <label
+    class="yum-form-field-label"
+    [for]="input.inputId"
+  >
+    <ng-content/>
+    @if (input.required) {
+      <span aria-hidden="true" class="yum-form-field-label-required"> * </span>
+    }
+  </label>
+  <div class="yum-form-field-input-container">
+    <ng-content select="[yumFormFieldInput]"/>
+    @if (action || input.pending) {
+      <div class="yum-form-field-action">
+        @if (input.pending) {
+          <yum-spinner size="small"/>
+        } @else {
+          <ng-content select="[yumFormFieldAction]"/>
+        }
+      </div>
+    }
+  </div>
+</div>
+@if (shouldDisplayMessage()) {
+  <div class="yum-form-field-message">
+    @switch (getDisplayedMessage()) {
+      @case ('hint') {
+        <ng-content select="yum-form-field-hint"/>
+      }
+      @case ('error') {
+        <ng-container [ngTemplateOutlet]="getErrorMessage()"/>
+      }
+    }
+  </div>
+}
+<ng-content select="yum-form-field-error"/>

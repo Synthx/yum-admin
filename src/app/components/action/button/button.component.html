@@ -1,0 +1,16 @@
+<button
+  class="yum-btn yum-btn_variant--{{ variant }}"
+  [class.yum-btn--loading]="loading"
+  [disabled]="disabled || loading"
+  [type]="type"
+  (click)="tapped.emit($event)"
+>
+  <div class="yum-btn-content">
+    <ng-content />
+  </div>
+  @if (loading) {
+    <div class="yum-btn-spinner">
+      <yum-spinner size="small" />
+    </div>
+  }
+</button>

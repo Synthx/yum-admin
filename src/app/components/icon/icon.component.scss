@@ -1,0 +1,14 @@
+kia-icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+
+  .kia-icon {
+    display: block;
+    height: 100%;
+    width: 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: currentColor;
+  }
+}

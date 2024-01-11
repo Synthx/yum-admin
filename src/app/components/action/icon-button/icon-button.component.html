@@ -1,0 +1,8 @@
+<button
+  class="yum-icon-btn kia-icon-btn_variant--{{ variant }} kia-icon-btn_size--{{ size }}"
+  type="button"
+  [disabled]="disabled"
+  (click)="tapped.emit($event)"
+>
+  <yum-icon [name]="icon" />
+</button>
